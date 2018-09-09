@@ -59,6 +59,7 @@ public class EmployeeInfo {
 	 * 
 	 */
 	public static int calculateEmployeePension(){
+		//use scanner class
 		int total=0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");

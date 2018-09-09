@@ -1,12 +1,17 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A.A programming language specifies a set of instructions that can be used to produce various kinds of output. It is used to create programs that implement specific algorithms.
 What jdk contains or composed of and define each components?
+A.The main components of jdk are- The Compiler,The Applet Viewer,The Debugger,The Class File,The Runtime Interpreter,The Header & Stub File Generator,The Docs Generator,Applet Demos,Api Source Code.
 What is IDE?
+A.Integrated Drive Electronics is an interface used between a computer motherboard's data paths and its disk's storage.
 What are the IDEs available in the market to support java?
+IDEs in the market for java support are - Intellij,NetBeans,Eclipse
 Explain the entire java life cycle.
+Input Unit-Memory Unit-Arithmetic-Logic Unit-Central Processing Unit-Storage Unit-Output unit
 what is class?
+
 What is object?
 What is the entry point of an application?
 Why main is static?
