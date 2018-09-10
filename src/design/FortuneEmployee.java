@@ -16,6 +16,28 @@ public class FortuneEmployee {
 	public static void main(String[] args) {
 		
 
+EmployeeInfo emp1 = new EmployeeInfo("Lisa",3745);
+EmployeeInfo emp2 = new EmployeeInfo("Bob", 4444);
+emp1.assignDepartment("IT");
+emp1.assignDepartment("HR");
+
+emp1.setSalary(7000);
+emp1.calculateSalary(emp1.getSalary());
+emp2.setSalary(5500);
+emp2.calculateSalary(emp2.getSalary());
+
+String vision = "DO YOUR BEST";
+		emp1.describeCompany();
+		emp1.describeCompany(vision);
+
+		emp1.setPerformance(3);
+		double bonus1 = (emp1.calculateEmployeeBonus(emp1.getSalary(), (int) emp1.getPerformance()));
+		emp2.setPerformance(2);
+		double bonus2 = (emp2.calculateEmployeeBonus(emp2.getSalary(), (int) emp2.getPerformance()));
+
+
+
+
 
 	}
 
