@@ -28,10 +28,12 @@ public class Numbers {
 		//Selection Sort
 		Sort algo = new Sort();
 		algo.selectionSort(num);
+		//selection sort
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
         connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
         List<String> numbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
+
         printValue(numbers);
 		int n = num.length;
 		randomize (num, n);
@@ -42,7 +44,15 @@ public class Numbers {
 
 		//By following above, Continue for rest of the Sorting Algorithm....
 
+      printValue(numbers);
+      randomize (num, n);
 
+      //bubble sort
+		algo.bubbleSort(num);
+long bubbleSortExecutionTime = algo.executionTime;
+System.out.println("Total Execution Time of "+ num.length + "numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+System.out.println("Time Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+connectToSqlDB.insertDataFromArrayToSqlTable(num, "Bubble_sort", "SortingNumbers");
 
 
 		//Come to conclusion about which Sorting Algo is better in given data set.
