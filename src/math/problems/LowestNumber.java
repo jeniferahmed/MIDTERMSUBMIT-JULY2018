@@ -22,7 +22,7 @@ public class LowestNumber {
 		 }
 		 System.out.println("Smallest number in array is :" + smallest);
 
-		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+		/*ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		List<String> lowestValue = new ArrayList<String>();
 		try {
 			connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_lowestNumber", "column_lowestNumber");
@@ -34,7 +34,7 @@ public class LowestNumber {
 		System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
 		for(String st:lowestValue){
 			System.out.println(st);
-		}
+		}*/
 	}
 
 }
