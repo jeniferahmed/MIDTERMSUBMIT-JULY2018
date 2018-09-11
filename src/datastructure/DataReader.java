@@ -1,8 +1,28 @@
 package datastructure;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 public class DataReader {
 
 	public static void main(String[] args) {
+		FileReader fr=null;
+		BufferedReader br=null;
+		String textFile = System.getProperty("Users/COdy/Documents/MidtermJuly2018") + "/src/data/self-driving-car.txt";
+		try {
+			fr = new FileReader(textFile);
+			System.out.println("your File has been found");
+		}catch(Exception e) {
+			System.out.println("File b not found");
+		try {
+			br = new BufferedReader(fr);
+			String data = "";
+			while ((data = br.readLine()) != null) {
+
+			}
+		}catch (Exception ex) {
+			System.out.println("No data");
+		}
 		/*
 		 * User API to read the below textFile and print to console.
 		 * Use BufferedReader class. 
@@ -18,9 +38,8 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
 
-
+		}
 
 	}
 
