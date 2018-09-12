@@ -1,19 +1,36 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A. Data structure in Java is needed so that storing & organizing data can be done efficiently.
 What are the various operations that can be performed on different Data Structures?
+A. The following can be performed on different Data Structures: Traversing,Searching,
+Inserting,Deleting,Sorting,Merging
 List out the areas in which data structures are applied extensively?
+A. Areas Are: Compiler Design,OS,Database Management System,Statistical Analysis Package,Numerical Analysis,Graphics,
+Stimulation & Artificial Intelligence
 what is an Array?
+A. An array is a container object that holds a fixed number of values of a single type.
 what is the difference between the Array and ArrayList?
+A. The differences are: Array is a fixed length data structure, length of cannot be changed once created.
+Arraylist is a variable length Collection class and it re-sizes itself when gets full depending on capacity & load factor
 what is LinkedList?
+A. A linkedlist is a linear data structure where each element is a separate object
 How is an Array different from Linked List?
+The difference is: In array, each element is independent, no connection with previous element or with its location
+In Linked list,location or address of elements is stored in the link part of previous element/node
 what is queue?
+A. queue represents an ordered list of objects just like a list, but its intended use is slightly different.
 what is stack?
+A. Stack is a collection that is based on the LIFO principle
 what is FIFO and LIFO?
+A. FIFO & LIFO are:
+First In First Out & Last In First Out
 what is the order of complexity?
+A. When you optimize code for,if an input requires size of N in the code,it will have O(N) complexity.
 what is the best case to search an element from an array?
+A. The best case to search an element from an array is by first element of the list.
 what is the worst case to search an element from an array?
+The worst case to search an element from an array is by the last element of the list.
 what is tree in data structure?
 what is graph in data structure?
 what is the difference between the HashTable and HashMap?
