@@ -32,15 +32,33 @@ A. The best case to search an element from an array is by first element of the l
 what is the worst case to search an element from an array?
 The worst case to search an element from an array is by the last element of the list.
 what is tree in data structure?
+A. A tree is a widely used abstract data type that simulates a hierarchical tree structure,
+with a root value and subtrees of children with a parent node,represented as
+a set of linked nodes.
 what is graph in data structure?
+A.A graph is an object consisting of a vertex set and an edge set
 what is the difference between the HashTable and HashMap?
+A.The difference between HashTable & HashMap-HashTable-a data structure to retain values of key value pair
+& HasMap accepts key value pair
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+A.The major data structure used are-RDBMS: Array,Network data model: Graph & Hierarchical data model: Trees.
 How HashMap works in java?
+A.HashMap accepts key value pair in java
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+A.All Array accesses are checked at run time;an attempt to use an index that is
+less than zero or greater than or equal to the length of the array causes an ArrayIndexOutOfBoundsException to be thrown.
 What are the different ways of copying an array into another array?
+A.4 different ways to copy all elements of one array into another array in java-
+Manually,Array.copyOf()
+System.arraycopy()
+Object.clone()
 What is difference between an array and a linked list?
+A.In array each element is independent,no connection with previous element or with its location.
+In Lined list, location or address of elements is stored in the link part of previous element/node
 What is DFS and BFS?
+DFS: Depth first search,BFS: Breadth First Search
 What is Recursion?
+
 What are linear and non linear data Structures?
 What is Big-(O)-notation?
 Outlined different kind of sorting algorithm with time complexity?
