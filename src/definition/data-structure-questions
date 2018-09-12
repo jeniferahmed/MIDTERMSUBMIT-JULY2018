@@ -58,11 +58,16 @@ In Lined list, location or address of elements is stored in the link part of pre
 What is DFS and BFS?
 DFS: Depth first search,BFS: Breadth First Search
 What is Recursion?
-
+Recursion is a basic programming technique you can use in Java in which a method calls itself to solve some problem
 What are linear and non linear data Structures?
+Linear Data Structure - all the data are arranged in sequence manner
+Non-Linear Data Structure - all the data are arranged in random manner
 What is Big-(O)-notation?
+Big(o) - notation describes the performance or complexity of an algorithm.
+A.Big-(o)-notation describes the performance of complexity of an algorithm
 Outlined different kind of sorting algorithm with time complexity?
-
+A.QuickSort: Best(o(n log(n)); Average(o(nlog(n));worst(o(N^2)
+  InsertionSort: Best(O(n)); Average(o(n^2));worst(o(n^2))
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
