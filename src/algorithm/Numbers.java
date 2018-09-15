@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.Sort;
+
 import databases.ConnectToSqlDB;
 
 import java.util.List;
@@ -46,7 +46,49 @@ public class Numbers {
         n = num.length;
         randomize (num, n);
         //By following above, Continue for rest of the Sorting Algorithm....
+        algo.bubbleSort(num);
+        long bubbleSortExecutionTime = algo.executionTime;
+        System.out.println("Time Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+        connectToSqlDB.insertDataFromArrayToSqlTable(num, "Bubble_sort", "SortingNumbers");
+        numbers = connectToSqlDB.readDataBase("Bubble_sort", "SortingNumbers");
+        printValue(numbers);
+        randomize (num, n);
 
+        //merge sort
+        algo.mergeSort(num);
+        long mergeSortExecutionTime = algo.executionTime;
+        System.out.println("Time Execution Time of " + num.length + "numbers in Merge Sort take: " + mergeSortExecutionTime + "milli sec");
+        connectToSqlDB.insertDataFromArrayToSqlTable(num, "merge_sort", "SortingNumbers");
+        numbers = connectToSqlDB.readDataBase("merge_sort", "SortingNumbers");
+        printValue(numbers);
+        randomize (num, n);
+
+        //Quick sort
+        algo.quickSort(num);
+        long quickSortExecutionTime = algo.executionTime;
+        System.out.println("Time Execution Time of "+ num.length + "numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
+        connectToSqlDB.insertDataFromArrayToSqlTable(num, "quick_sort","Sorting Numbers");
+        numbers = connectToSqlDB.readDataBase("quick sort", "SortingNumbers");
+        printValue(numbers);
+        randomize(num, n);
+
+        //heap sort
+        algo.heapSort(num);
+        long heapSortExecutionTime = algo.executionTime;
+        System.out.println("Time Execution Time of " + num.length + " numbers in Heap Sort take: " + heapSortExecutionTime + " milli sec");
+        connectToSqlDB.insertDataFromArrayToSqlTable(num, "heap_sort", "SortingNumbers");
+        numbers = connectToSqlDB.readDataBase("heap_sort", "SortingNumbers");
+        printValue(numbers);
+        randomize (num, n);
+
+        //Shell sort
+        algo.shellSort(num);
+        long shellSortExecutionTime = algo.executionTime;
+        System.out.println("Total Execution Time of " + num.length + " numbers in Shell Sort take: " + shellSortExecutionTime + " milli sec");
+        connectToSqlDB.insertDataFromArrayToSqlTable(num, "shell_sort", "SortingNumbers");
+        numbers = connectToSqlDB.readDataBase("shell_sort", "SortingNumbers");
+        printValue(numbers);
+        randomize (num, n);
 
 
 
@@ -73,12 +115,40 @@ public class Numbers {
             arr[j] = temp;
         }
     }
-    public static void printValue(List<String> array){
-        for(String st:array){
+    public static void printValue(List<String> array) {
+        for (String st : array) {
             System.out.println(st);
+
+
         }
+
     }
+        public static int findLow ( int[] array){
+            int low = array[0];
+            for (int n : array) {
+                if (array[n] < low) {
+                    low = array[n];
+                }
+            }
+            return low;
+
+        }
+        public static int
+        findHigh( int[] array){
+            int high = array[0];
+            for (int n : array) {
+                if (array[n] > high) {
+                    high = array[n];
+
+                }
+            }
+            return high;
+
+
+        }
 }
+
+
 
 
 //package algorithm;
@@ -105,7 +175,7 @@ public class Numbers {
 	 */
 
 /*	public static void main(String[] args) throws Exception {
-		
+
 		int [] num = new int[1000000];
 		storeRandomNumbers(num);
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();

@@ -13,17 +13,15 @@ public class Sort {
 		final long startTime = System.currentTimeMillis();
 		int [] list = array;
 
-		for(int j=0; j<array.length-1; j++){
-			int min = j;
-			for(int i=j+1; i<array.length; i++) {
-				if (array[i] < array[min])
-					min = i;
+		for(int i=0; i<array.length-1; i++){
+			for(int j=i+1; j<array.length; j++) {
+				if (array[j] < array[i]) {
 			}
 
-			int temp = array[min];
-			array[min] = array[j];
-			array[j] = temp;
-		}
+			int temp = array[j];
+			array[j] = array[i];
+			array[i] = temp;
+		}}
 
 		final long endTime = System.currentTimeMillis();
 		final long executionTime = endTime - startTime;
@@ -35,40 +33,110 @@ public class Sort {
 		final long startTime = System.currentTimeMillis();
 		int [] list = array;
 		//implement here
-
-
-
+		int i, key, j;
+		for (i = 1; i < array.length; i++) {
+		    key = array[i];
+		    j = i-1;
+		    while (j >= 0 && array[j] > key) {
+		        array[j+1] = array[j];
+		        j = j-1;
+            }
+            array[j+1] = key;
+				}
 		final long endTime = System.currentTimeMillis();
 		final long executionTime = endTime - startTime;
 		this.executionTime = executionTime;
 		return list;
 	}
 
-	public int[] bubbleSort(int [] array){
-		int [] list = array;
+        public int[] bubbleSort(int [] array) {
+            final long startTime = System.currentTimeMillis();
+            int[] list = array;
+            //implement here
+
+            for (int i = 0; i < array.length; i++)
+                for (int j = 1; j < array.length - i; i++)
+                    if (array[j - 1] < array[j]) {
+                        int temp = array[j - 1];
+                        array[j - 1] = array[j];
+                        array[j] = temp;
+                    }
+
+                    final long endTime = System.currentTimeMillis();
+                    final long executionTime = endTime - startTime;
+                    this.executionTime = executionTime;
+                    return list;
+
+                }}
+
+/*	public int [] mergeSort(int [] array) {
+        if (array.length > 1) {
+            //splitting array into 2 halves
+            int[] left = leftHalf(array);
+            int[] right = rightHalf(array);
+            mergeSort(left);
+            mergeSort(right);
+            merge(array, left, right);
+        }
+    }
+
+        //left half
+    public int[] leftHalf(int[] array) {
+        int size1 = array.length / 2;
+        int[] left = new int[size1];
+        for (int i = 0; i < size1; i++) {
+            left[i] = array[i];
+        }
+        return left;
+    }
+
+    //right half
+    public static int[] rightHalf(int[] array) {
+        int size1 = array.length / 2;
+        int size2 = array.length - size1;
+        int[] right = new int[size2];
+        for (int i = 0; i < size2; i++) {
+            right[i] = array[i + size1];
+        }
+        return right;
+    }
+
+    //result
+    public void merge(int[] result, int[] left, int[] right) {
+	    int i1 = 0;
+	    int i2 = 0;
+     for (int i =0; i < result.length; i++) {
+         if (i2 >= right.length || (i1 < left.length && left[i1] <= right[i2])) {
+             result[i] = right[i2];
+             i1++;
+         }else {
+             result[i] = left[i1];
+             i2++;
+         }
+         }
+     }
+
+
 		//implement here
 
 
-
-		return list;
-	}
-
-
-	public int [] mergeSort(int [] array){
+	/*public int [] quickSort(int [] array){
 		int [] list = array;
 		//implement here
+        public int[] quickSort(int [] array, int low, int high){
+            final long  stattTime = System.currentTimeMillis();
+            int [] list = array;
 
-
-
-		return list;
-	}
-
-
-	public int [] quickSort(int [] array){
-		int [] list = array;
-		//implement here
-
-
+            if(low < high){
+                int next = partition(array, low, high);
+                quickSort(array, low, next-1);
+                quickSort(array, next+1, high);
+            }
+            final long endTime = System.currentTimeMillis();
+            final long executionTime = endTime - startTime;
+            this.executionTime = executionTime;
+            return list;
+        }
 
 		return list;
 	}
